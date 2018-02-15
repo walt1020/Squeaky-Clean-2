@@ -1,19 +1,22 @@
 {
-  "name": "squeaky-clean-ryan",
+  "name": "squeak-clean",
   "version": "1.0.0",
-  "description": "Squeaky clean is a mobile car wash service. Our mobile team will come to you to provide our outstanding car detailing service.  Booking is simple. All we need is a location and your keys!",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "node back/app.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/walt1020/Squeaky-Clean-2-ryan.git"
+    "url": "git+https://github.com/nnm0122/Squeaky-Clean-2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/walt1020/Squeaky-Clean-2-ryan/issues"
+    "url": "https://github.com/nnm0122/Squeaky-Clean-2/issues"
   },
-  "homepage": "https://github.com/walt1020/Squeaky-Clean-2-ryan#readme"
+  "homepage": "https://github.com/nnm0122/Squeaky-Clean-2#readme"
 }
