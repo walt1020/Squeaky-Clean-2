@@ -5,7 +5,7 @@ render() {
   return (
       <div className="404">
 
-      404
+      <p> OOPS! Something went wrong :-( </p>
 
       </div>
     );
