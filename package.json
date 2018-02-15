@@ -1,0 +1,19 @@
+{
+  "name": "squeaky-clean-ryan",
+  "version": "1.0.0",
+  "description": "Squeaky clean is a mobile car wash service. Our mobile team will come to you to provide our outstanding car detailing service.  Booking is simple. All we need is a location and your keys!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walt1020/Squeaky-Clean-2-ryan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/walt1020/Squeaky-Clean-2-ryan/issues"
+  },
+  "homepage": "https://github.com/walt1020/Squeaky-Clean-2-ryan#readme"
+}
