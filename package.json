@@ -7,7 +7,7 @@
     "server": "node back/app.js",
     "client": "node scripts/start-client.js",
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
