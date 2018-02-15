@@ -1,6 +1,9 @@
 {
 	"name": "SqueakyClean",
 	"version": "1.0.0",
+	"engines": {
+    "node": "6.11.4"
+  	},
 	"description": "SqueakyClean",
 	"scripts": {
 		"start": "nodemon app.js"
