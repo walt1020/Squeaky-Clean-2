@@ -1,4 +1,6 @@
 import React, {Component } from 'react';
+import Jumbotron from './jumbotron/jumbotron';
+import axios from 'axios';
 
 class Contact extends Component {
 constructor(props){
@@ -8,7 +10,7 @@ constructor(props){
       body: null
     }
     this.handleInputChange=this.handleInputChange.bind(this);
-     this.handleFormSubmit=this.handleFormSubmit.bind(this);
+     this.formSubmit=this.formSubmit.bind(this);
   }
   handleInputChange(event) {
     const name=event.target.name
@@ -18,22 +20,24 @@ constructor(props){
     })
   }
 
-  handleFormSubmit(event) {
-    event.preventDefault();
-    // alert(`email: ${this.state.email} and body: ${this.state.body}`);
-
-  }
+    formSubmit() {
+    axios.post("/service",this.state).then(
+        (res)=>{
+            alert(res.data)
+        }
+      );
+  }  
 
   render() {
     return (
       <section className="container page">
-          {//<Jumbotron 
-            // title="Contact Us"
-            // subTitle="We would love to hear your feedback"
-            // description="Thank you for being a customer!"
-          ///>
-        }
-            <form>
+          <Jumbotron 
+             title="Contact Us"
+            subTitle="We would love to hear your feedback"
+            description="Thank you for being a customer!"
+          />
+        
+            
               <div className="form-group">
                 <label for="exampleFormControlInput1">Email address</label>
                 <input type="email"
@@ -53,8 +57,8 @@ constructor(props){
                           onChange={this.handleInputChange}
                           rows="3"></textarea>
               </div>
-              <button type="submit" onClick={this.handleFormSubmit}>Submit</button>
-            </form>
+              <button  onClick={this.formSubmit}>Submit</button>
+            
           </section>
     );
   }
