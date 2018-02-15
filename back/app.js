@@ -1,7 +1,7 @@
 // Requirements
 const express = require("express");
 const app = module.exports = express();
-const port = 8080;
+const PORT = process.env.PORT || 8080;
 const cookieParser = require('cookie-parser');
 const bodyParser = require("body-parser");
 const path = require('path');
