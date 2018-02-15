@@ -1,15 +1,15 @@
 // Requirements
 const express = require("express");
 const app = module.exports = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8888;
 const cookieParser = require('cookie-parser');
 const bodyParser = require("body-parser");
 const path = require('path');
 const morgan = require('morgan');
 
 // Server
-const server = app.listen(port, () => {
-	console.log("--ONLINE Port: " + port + "--");
+const server = app.listen(PORT, () => {
+	console.log("--ONLINE Port: " + PORT + "--");
 });
 
 // Middleware
