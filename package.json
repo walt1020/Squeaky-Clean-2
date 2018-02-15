@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/nnm0122/Squeaky-Clean-2/issues"
   },
-  "homepage": "https://github.com/nnm0122/Squeaky-Clean-2#readme"
+  "homepage": "https://github.com/nnm0122/Squeaky-Clean-2#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0"
+  }
 }
