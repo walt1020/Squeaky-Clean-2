@@ -1,11 +1,8 @@
 import React, {Component } from 'react';
+import axios from 'axios';
 
 class Schedule extends Component {
-render() {
-  return (
-      <div className="schedule">
 
-     export class ScheduleService extends React.Component {
   constructor(props){
     super(props);
     this.state={
@@ -37,41 +34,42 @@ render() {
   }
   render() {
     return (
-      <div className="bootstrap-iso">
-      <h1> Book your appointment with our Mobile Detailing Team!</h1>
-          <div className="container-fluid washPackages row col-xs-8 col-xs-offset-2">
-            <div className="form-group"> 
-              <label className="control-label" htmlFor="date"><br />Step 1: Select a Date: </label>
-              <input className="date" name="date" type="date"  defaultValue={new Date()} onChange={this.handleChange} />
-            </div>
-              <label className="control-label" htmlFor="date">Step 2: Select a Time: (hh:mm:pm/am)  </label>
-              <input type="time"  name="time" onChange={this.handleChange}/>
-            
-            <div className="form-group">
-              <p>*Note that for same day appointment, <br /> scheduling will have to be prior to 2pm.</p>
-            <div>     
-              <label className="control-label" htmlFor="address">Step 3: Provide the location of your vehicle:  </label>
-              <input type="address" name= "address" onChange={this.handleChange} />
-            </div>
-          <br/>
-          
-          <div>  
-            <label className="control-label" htmlFor="car">Step 4: Provide the make, model,color of your vehicle:  </label>
-            <input type="car" name="car" onChange={this.handleChange} />
-          </div>
-            <br/>
+      <div className='page'>
+	      <div className="bootstrap-iso">
+	      <h1> Book your appointment with our Mobile Detailing Team!</h1>
+	          <div className="container-fluid washPackages row col-xs-8 col-xs-offset-2">
+	            <div className="form-group"> 
+	              <label className="control-label" htmlFor="date"><br />Step 1: Select a Date: </label>
+	              <input className="date" name="date" type="date"  defaultValue={new Date()} onChange={this.handleChange} />
+	            </div>
+	              <label className="control-label" htmlFor="date">Step 2: Select a Time: (hh:mm:pm/am)  </label>
+	              <input type="time"  name="time" onChange={this.handleChange}/>
+	            
+	            <div className="form-group">
+	              <p>*Note that for same day appointment, <br /> scheduling will have to be prior to 2pm.</p>
+	            <div>     
+	              <label className="control-label" htmlFor="address">Step 3: Provide the location of your vehicle:  </label>
+	              <input type="address" name= "address" onChange={this.handleChange} />
+	            </div>
+	          <br/>
+	          
+	          <div>  
+	            <label className="control-label" htmlFor="car">Step 4: Provide the make, model,color of your vehicle:  </label>
+	            <input type="car" name="car" onChange={this.handleChange} />
+	          </div>
+	            <br/>
 
-          <div>  
-            <label className="control-label" htmlFor="plate">Step 5: Vehicle license plate number:  </label>
-            <input type="plate" name="plate" onChange={this.handleChange} />
-          </div>
-          <br/>
+	          <div>  
+	            <label className="control-label" htmlFor="plate">Step 5: Vehicle license plate number:  </label>
+	            <input type="plate" name="plate" onChange={this.handleChange} />
+	          </div>
+	          <br/>
 
-          <button className="btn btn-primary " name="submit" onClick={this.formSubmit}>Submit</button>
+	          <button className="btn btn-primary " name="submit" onClick={this.formSubmit}>Submit</button>
 
-        </div> 
-      </div>
-    </div>
+	        </div> 
+	      </div>
+	    </div>
 <div className="col-xs-4 table-bordered" >
       <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <h3>Squeaky Clean $45</h3>
@@ -92,8 +90,7 @@ render() {
             </form>
             
     </div>
-
-      </div>
+    </div>
     );
   }
 }

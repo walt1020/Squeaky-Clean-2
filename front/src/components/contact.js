@@ -1,54 +1,41 @@
 import React, {Component } from 'react';
 
 class Contact extends Component {
-render() {
-  return (
-      <div className="contact">
-
-      const defaultState = {
-  email: '',
-  body: '',
-}
-var styles = {
-  fonts:{
-    color: 'black',
-  
-  },
-  background:{
-    backgroundColor:'rgba(100,100,241, 0.8)'
+constructor(props){
+    super(props);
+    this.state={
+      email: null, 
+      body: null
+    }
+    this.handleInputChange=this.handleInputChange.bind(this);
+     this.handleFormSubmit=this.handleFormSubmit.bind(this);
   }
-}
-
-export class Contact extends React.Component {
-
-  state = defaultState;
-
-  handleInputChange = (event) => {
-    const { name, value }= event.target;
-
+  handleInputChange(event) {
+    const name=event.target.name
+    const value=event.target.value
     this.setState({
       [name]: value
     })
   }
 
-  handleFormSubmit = (event) => {
+  handleFormSubmit(event) {
     event.preventDefault();
-    alert(`email: ${this.state.email} and body: ${this.state.body}`);
+    // alert(`email: ${this.state.email} and body: ${this.state.body}`);
 
-    this.setState(defaultState)
   }
 
   render() {
     return (
-      <section className="container">
-          <Jumbotron 
-            title="Contact Us"
-            subTitle="We would love to hear your feedback"
-            description="Thank you for being a customer!"
-          />
-            <form style={styles.background}>
+      <section className="container page">
+          {//<Jumbotron 
+            // title="Contact Us"
+            // subTitle="We would love to hear your feedback"
+            // description="Thank you for being a customer!"
+          ///>
+        }
+            <form>
               <div className="form-group">
-                <label style={styles.fonts} for="exampleFormControlInput1">Email address</label>
+                <label for="exampleFormControlInput1">Email address</label>
                 <input type="email"
                       value={this.state.email}
                         className="form-control"
@@ -58,7 +45,7 @@ export class Contact extends React.Component {
                         placeholder="name@example.com" />
               </div>
               <div className="form-group">
-                <label style={styles.fonts} for="exampleFormControlTextarea1">Enter your comment here.</label>
+                <label for="exampleFormControlTextarea1">Enter your comment here.</label>
                 <textarea className="form-control"
                           name="body"
                           value={this.state.body}
@@ -68,8 +55,7 @@ export class Contact extends React.Component {
               </div>
               <button type="submit" onClick={this.handleFormSubmit}>Submit</button>
             </form>
-
-      </div>
+          </section>
     );
   }
 }
